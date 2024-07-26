@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Prediction</title>
+</head>
+<body style="text-align: center;background-color: rgb(141, 162, 254);">
+    <h2>Get your Insurance premium charges prediction.</h2>
+    <hr>
+    <form action="{{ url_for('data') }}" method="post">
+        <label for="age">Enter your age</label>
+        <input type="number" name="age">
+        <br><br>
+        <label for="region">Select Region : </label>
+        <select name="region">
+            <option value="southeast">southeast</option>
+            <option value="southwest">southwest</option>
+            <option value="northeast">northeast</option>
+            <option value="northwest">northwest</option>
+        </select>
+        <br><br>
+        <label for="children">Select number of children : </label>
+        <select name="children">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <br><br>
+        <label for="health">Health : </label>
+        <select name="health">
+            <option value="1">Underweight</option>
+            <option value="3">Overweight</option>
+            <option value="2">Healthy</option>
+            <option value="4">Obese</option>
+        </select>
+        <br><br>
+        <label for="gender">Gender : </label>
+        <select name="gender" id="">
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+        </select>
+        <br><br>
+        <label for="smoker">Smoker : </label>
+        <select name="smoker" id="">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+<br><br>
+<label for="bmi">Bmi : </label>
+<input type="number" name="bmi">
+<br><br>
+        <button type="submit">Submit</button>
+
+    </form>
+</body>
+</html>
